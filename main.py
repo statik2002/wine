@@ -1,9 +1,10 @@
 import datetime
+import pprint
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from excelreader import read_from_excel
+from excelreader import read_from_excel, read_from_excel2
 
 env = Environment(
     loader=FileSystemLoader('.'),
@@ -13,8 +14,9 @@ env = Environment(
 template = env.get_template('template.html')
 
 
-wine_data = read_from_excel('wine.xlsx')
-print(wine_data)
+# wine_data = read_from_excel('wine.xlsx')
+wine_data = read_from_excel2('wine2.xlsx')
+pprint.pprint(wine_data)
 
 
 def years(year):
