@@ -22,4 +22,4 @@ def read_from_excel3(filename):
     ex = collections.defaultdict(list)
     for item in perm:
         ex[item['Категория']].append(item)
-    pprint.pprint(ex)
+    return ex
