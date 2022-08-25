@@ -125,7 +125,9 @@
                   <div>
                     <h3 class="heading mt-3 mb-3 text-dark">{{ item['Название'] }}</h3>
                     <p>
+                      {% if item['Сорт']!='' %}
                       Сорт винограда - {{ item['Сорт'] }}<br/>
+                      {% endif %}
                       <span class="price">{{ item['Цена'] }} р.</span>
                     </p>
                   </div>
