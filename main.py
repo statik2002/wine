@@ -14,13 +14,11 @@ env = Environment(
 
 template = env.get_template('template.html')
 
-
-#wine_data = read_from_excel2('wine2.xlsx')
-
-
-wine_data = read_from_excel3('wine2.xlsx')
+# Функцию read_from_excel3 импортировали из excelreader.py
+wine_data = read_from_excel3('wine3.xlsx')
 
 
+# Выводим правильное значение лет\год\года в зависимости от значения года
 def years(year):
     if 11 <= year % 100 <= 19:
         return "лет"
@@ -46,5 +44,5 @@ rendered_page = template.render(
 with open('index.html', 'w', encoding="utf8") as file:
     file.write(rendered_page)
 
-server = HTTPServer(('0.0.0.0', 8100), SimpleHTTPRequestHandler)
+server = HTTPServer(('0.0.0.0', 8000), SimpleHTTPRequestHandler)
 server.serve_forever()
