@@ -5,8 +5,12 @@
 ## Запуск
 
 - Скачайте код
-- Установите виртуальное окружение командой `python3 -m venv env`
-- Войдите в виртуальное окружение командой `source env/bin/activate`
+- Установите виртуальное окружение командой 
+    - UNIX/MacOs : `python3 -m venv env`
+    - Windows : `python -m venv env`
+- Войдите в виртуальное окружение командой
+  - UNIX/MacOs : `source env/bin/activate`
+  - Windows : `env/scripts/activate.bat`
 - Установите все зависимости командой `pip install -r requirements.txt`
 - Запустите сайт командой `python3 main.py`
 - Перейдите на сайт по адресу [http://127.0.0.1:8000](http://127.0.0.1:8000).
