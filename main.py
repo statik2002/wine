@@ -28,7 +28,7 @@ def main(filepath, template_path):
 
     template = env.get_template(template_path)
 
-    products_from_excel_file = read_products(filepath)
+    products = read_products(filepath)
 
     foundation_year = 1922
     current_year = datetime.datetime.now().year
@@ -38,7 +38,7 @@ def main(filepath, template_path):
     rendered_page = template.render(
         year=year_delta,
         year_word=year_word,
-        wines=products_from_excel_file,
+        products=products,
     )
 
     with open('index.html', 'w', encoding="utf8") as file:
